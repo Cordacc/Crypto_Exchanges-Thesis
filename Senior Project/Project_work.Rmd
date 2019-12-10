@@ -1,0 +1,20 @@
+---
+title: "Project_work"
+author: "Cormac Slade Byrd"
+date: "October 17, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+BTC_USD_2019 <- read.csv("BTCUSD/Candles_1m/2019/merged.csv",header = F)
+colnames(BTC_USD_2019) <- c("timestamp ","open","close","highest","lowest","volume")
+```
+
+```{r}
+plot(BTC_USD_2019$volume)
+```
+
